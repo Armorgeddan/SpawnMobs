@@ -1,0 +1,10 @@
+name: Tutorial
+main: me.YourName.tutorial.Tutorial
+version: 1.0
+website: yourwebsite.com
+description: This is an example description
+author: YourName
+
+commands:
+   test:
+     description: Example description.
