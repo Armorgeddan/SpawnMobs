@@ -19,7 +19,7 @@ public class Tutorial extends JavaPlugin implements Listener {
 
 	// Spawn a Cow
 	public void spawnCow(Player player) {
-		CraftCow cow = (CraftCow) player.getLocation().getWorld()
+		Cow cow = (Cow) player.getLocation().getWorld()
 				.spawn(player.getLocation(), Cow.class);
 		// Set them as a baby
 		cow.setBaby();
