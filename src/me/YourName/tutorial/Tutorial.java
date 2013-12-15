@@ -17,7 +17,7 @@ public class Tutorial extends JavaPlugin implements Listener {
 	}
 
 	// Spawn a Cow
-	public void spawnCow(Player player) {
+	public void spawnCOW(Player player) {
 		Cow cow = (Cow) player.getLocation().getWorld()
 				.spawn(player.getLocation(), Cow.class);
 		// Set them as a baby
@@ -29,13 +29,42 @@ public class Tutorial extends JavaPlugin implements Listener {
 		// Make the custom name visible
 		cow.setCustomNameVisible(true);
 	}
+	
+	public void spawnVILLAGER(Player player)
+	{
+		Villager v = (Villager) player.getLocation().getWorld().spawn(player.getLocation(), Villager.class);
+		
+		v.setCustomName(ChatColor.GREEN + "Tom");
+		v.setCustomNameVisible(true);
+		
+		// Set as a baby
+		v.setBaby();
+		// Lock their age
+		v.setAgeLock(true);
+		// Set their profession
+		v.setProfession(Profession.LIBRARIAN);
+	}
+	
+	// Spawn a Wither Skeleton
+	public void spawnSKELETON(Player player)
+	{
+		Skeleton s = (Skeleton) player.getLocation().getWorld().spawn(player.getLocation(), Skeleton.class);
+		
+		s.setCustomName(ChatColor.AQUA + "9001");
+		s.setCustomNameVisible(true);
+		// Here we can set what type of skeleton
+		s.setSkeletonType(SkeletonType.WITHER);
+		// Here we can alter the skeleton's inventory
+		s.getEquipment().setItemInHand(new ItemStack(Material.BOAT));
+		s.getEquipment().setHelmet(new ItemStack(Material.CACTUS));
+	}
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label,
 			String[] a) {
 		if (cmd.getName().equalsIgnoreCase("test")) {
 			Player player = (Player) sender;
-			spawnCow(player);
+			// Your Method
 		}
 		return false;
 	}
