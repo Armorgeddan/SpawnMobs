@@ -3,7 +3,6 @@ package me.YourName.tutorial;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_6_R3.entity.CraftCow;
 import org.bukkit.entity.Cow;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
